@@ -1,0 +1,43 @@
+{
+  "name": "playwright-automation-pipeline",
+  "version": "1.1.0",
+  "description": "Domain-agnostic, AI-driven end-to-end testing pipeline for Playwright",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:repeat": "playwright test --repeat-each=5 --retries=0 --workers=1",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "test:headed": "playwright test --headed",
+    "test:list": "playwright test --list",
+    "test:report": "playwright show-report",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --max-warnings=0",
+    "lint:fix": "eslint . --fix",
+    "verify": "npm run typecheck && npm run lint && npm run test:list",
+    "codegen": "playwright codegen"
+  },
+  "keywords": [
+    "playwright",
+    "testing",
+    "automation",
+    "e2e",
+    "end-to-end",
+    "ai-driven",
+    "test-pipeline"
+  ],
+  "author": "AI-driven testing team",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^22.20.5",
+    "eslint": "^10.14.0",
+    "eslint-plugin-playwright": "^2.12.1",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.72.1"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}

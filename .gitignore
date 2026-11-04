@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Secrets and saved logins
+.env
+.env.local
+.env.*.local
+playwright/.auth/
+
+# Test outputs
+playwright-report/
+test-results/
+blob-report/
+
+# Local pipeline files, kept off this branch
+skills/
+.testing/
+QUICK_START.md
+HowToUse.md
+HANDOFF.md
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
